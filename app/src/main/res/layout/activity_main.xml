@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/weightLiftingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#2ca5f5">
+
+            <ImageView
+                android:id="@+id/w_weightsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/weight_image"
+                android:src="@drawable/weight"
+                app:srcCompat="@drawable/weight" />
+
+            <TextView
+                android:id="@+id/w_setCountView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="#30000000"
+                android:padding="6dp"
+                android:text="@string/_10_sets"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/w_layoutLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/weight_lifting"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/w_motivateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/do_you_even_lift"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/w_percentageCompleteView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/_30"
+                android:textSize="38sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/yogaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#916bcd">
+
+            <ImageView
+                android:id="@+id/y_weightsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/lotus_image"
+                android:src="@drawable/lotus"
+                app:srcCompat="@drawable/lotus" />
+
+            <TextView
+                android:id="@+id/y_setCountView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="#30000000"
+                android:padding="6dp"
+                android:text="@string/_1_hour"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/y_layoutLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/yoga"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/y_motivateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/namaste"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/y_percentageCompleteView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/_45"
+                android:textSize="38sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cardioLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#52ad56">
+
+            <ImageView
+                android:id="@+id/c_weightsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/heart_image"
+                android:src="@drawable/heart"
+                app:srcCompat="@drawable/heart" />
+
+            <TextView
+                android:id="@+id/c_setCountView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="#30000000"
+                android:padding="6dp"
+                android:text="@string/_5_miles"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/c_layoutLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/cardio"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/c_motivateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/no_pain_no_gain"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/c_percentageCompleteView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/_82"
+                android:textSize="38sp" />
+
+        </FrameLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Fab or Flab</string>
+    <string name="_10_sets">10 sets</string>
+    <string name="weight_lifting">Weight Lifting</string>
+    <string name="do_you_even_lift">Do you even lift?</string>
+    <string name="_30">30%</string>
+    <string name="_45">45%</string>
+    <string name="no_pain_no_gain">No pain, no gain!</string>
+    <string name="yoga">Yoga</string>
+    <string name="cardio">Cardio</string>
+    <string name="_1_hour">1 hour</string>
+    <string name="_82">82%</string>
+    <string name="namaste">Namaste</string>
+    <string name="_5_miles">5 miles</string>
+    <string name="heart_image">heart image</string>
+    <string name="lotus_image">lotus image</string>
+    <string name="weight_image">weight image</string>
+</resources>
