@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <include
+        layout="@layout/layout_weightlifting"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="321dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20000000"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:capitalize="none"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:textAllCaps="true" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/upArrow"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="up_arrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/Up2x"
+        android:tint="#40000000"
+        android:tintMode="screen"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="go_back"
+        android:scaleType="fitCenter"
+        android:src="@drawable/Back2x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="open_menu"
+        android:scaleType="fitCenter"
+        android:src="@drawable/Button2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
