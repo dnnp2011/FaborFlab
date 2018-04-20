@@ -7,6 +7,11 @@ import android.view.View;
 
 
 public class MainActivity extends Activity {
+
+    public static final String EXERCISE_WEIGHTS = "Weight Lifting";
+    public static final String EXERCISE_YOGA = "Yoga";
+    public static final String EXERCISE_CARDIO = "Cardio";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +23,8 @@ public class MainActivity extends Activity {
     //region Button Listeners
     public void onClickWeightlifting(View view) {
         assert view != null;
-        System.out.println("Click Weightlifting");
+        Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+        startActivity(intent);
     }
 
     public void onClickYoga(View view) {
