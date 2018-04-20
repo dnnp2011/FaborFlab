@@ -7,16 +7,15 @@
     tools:context=".DetailActivity">
 
     <fragment
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:id="@+id/background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout="@layout/layout_weightlifting" />
 
     <fragment
-        android:id="@+id/viewer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/layout_weightlifting" />
+        android:id="@+id/UI"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout="@layout/layout_ui_frame" />
 
 </android.support.constraint.ConstraintLayout>

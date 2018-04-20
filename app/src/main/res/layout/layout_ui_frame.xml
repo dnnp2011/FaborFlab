@@ -6,16 +6,49 @@
     android:layout_height="match_parent"
     android:background="#30FFFFFF">
 
+    <ImageButton
+        android:id="@+id/upButton"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/up_arrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/upbutton2x"
+        app:layout_constraintBottom_toTopOf="@+id/bottomFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/upbutton2x" />
+
     <FrameLayout
         android:id="@+id/topFrame"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#30000000"
+        android:layout_height="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/go_back"
+            app:srcCompat="@drawable/backbtn2x" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/open_menu"
+            app:srcCompat="@drawable/menubtn2x" />
     </FrameLayout>
 
     <FrameLayout
@@ -29,12 +62,15 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/nextButton"
             android:layout_width="120dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/next"
             android:scaleType="centerInside"
-            android:src="@drawable/NextButton2x" />
+            android:src="@drawable/nextbutton2x" />
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -27,7 +27,8 @@
             android:background="@drawable/rounded_corners"
             android:backgroundTint="#2ca5f5"
             android:clickable="true"
-            android:onClick="onClickWeightlifting">
+            android:onClick="onClickWeightlifting"
+            android:focusable="true">
 
             <ImageView
                 android:id="@+id/w_weightsImage"
