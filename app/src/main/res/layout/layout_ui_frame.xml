@@ -13,6 +13,7 @@
         android:layout_marginBottom="4dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/up_arrow"
+        android:onClick="onClickUp"
         android:scaleType="fitCenter"
         android:src="@drawable/upbutton2x"
         app:layout_constraintBottom_toTopOf="@+id/bottomFrame"
@@ -32,22 +33,28 @@
 
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
+            android:layout_width="26dp"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
             android:layout_marginStart="10dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/go_back"
+            android:onClick="onClickBack"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbtn2x"
             app:srcCompat="@drawable/backbtn2x" />
 
         <ImageButton
             android:id="@+id/menuButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/open_menu"
+            android:onClick="onClickMenu"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menubtn2x"
             app:srcCompat="@drawable/menubtn2x" />
     </FrameLayout>
 
@@ -68,6 +75,7 @@
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:contentDescription="@string/next"
+            android:onClick="onClickNext"
             android:scaleType="centerInside"
             android:src="@drawable/nextbutton2x" />
 

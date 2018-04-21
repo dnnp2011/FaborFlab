@@ -17,4 +17,16 @@ public class DetailActivity extends Activity {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
+
+    public void onClickNext(View view) {
+
+    }
+
+    public void onClickMenu(View view) {
+
+    }
+
+    public void onClickUp(View view) {
+
+    }
 }
