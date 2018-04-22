@@ -77,7 +77,7 @@
             android:contentDescription="@string/next"
             android:onClick="onClickNext"
             android:scaleType="centerInside"
-            android:src="@drawable/NextButton2x" />
+            android:src="@drawable/nextbtn2x" />
 
     </FrameLayout>
 
