@@ -2,13 +2,19 @@ package com.sleepless_entertainment.drowsy.faborflab;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
+import java.util.HashMap;
+import java.util.Set;
+
 public class DetailActivity extends Activity {
+
+    public static SharedPreferences preferences;
 
     private static final int NUM_CHECKBOX = 5;
     private static String CurrentExerciseBG;
@@ -20,6 +26,9 @@ public class DetailActivity extends Activity {
     private LinearLayout weightLinearLayout;
     private LinearLayout yogaLinearLayout;
     private LinearLayout cardioLinearLayout;
+
+//    private HashMap<String, String> checkboxValues;
+    private Set<String> checkboxValues;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,25 +45,83 @@ public class DetailActivity extends Activity {
         yogaLinearLayout = yogaInclude.findViewById(R.id.yogaLinearLayout);
         cardioLinearLayout = cardioInclude.findViewById(R.id.cardioLinearLayout);
 
+        preferences = getSharedPreferences(MainActivity.PREF_FILE_NAME, MODE_PRIVATE);
+
         loadBackground(CurrentExerciseBG);
 
 //        TODO: Have up arrow pop up an exercise selection UI, to avoid reliance on NEXT button
 //        TODO: Implement top menu button
+//        TODO: Add unique checklist items
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        saveCheckboxValues();
         setExerciseCompletion(null);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        setExerciseCompletion(null);
+        loadCheckboxValues();
     }
 
     //region Helper Methods
+    private void saveCheckboxValues() {
+        assert preferences != null;
+
+        SharedPreferences.Editor editor = preferences.edit();
+
+        for(int i = 0; i < weightLinearLayout.getChildCount(); i++) {
+            if (weightLinearLayout.getChildAt(i).getClass() != CheckBox.class)
+                continue;
+            CheckBox child = (CheckBox) weightLinearLayout.getChildAt(i);
+            editor.putBoolean(String.valueOf(child.getId()), child.isChecked());
+        }
+
+        for(int i = 0; i < yogaLinearLayout.getChildCount(); i++) {
+            if (yogaLinearLayout.getChildAt(i).getClass() != CheckBox.class)
+                continue;
+            CheckBox child = (CheckBox) yogaLinearLayout.getChildAt(i);
+            editor.putBoolean(String.valueOf(child.getId()), child.isChecked());
+        }
+
+        for(int i = 0; i < cardioLinearLayout.getChildCount(); i++) {
+            if (cardioLinearLayout.getChildAt(i).getClass() != CheckBox.class)
+                continue;
+            CheckBox child = (CheckBox) cardioLinearLayout.getChildAt(i);
+            editor.putBoolean(String.valueOf(child.getId()), child.isChecked());
+        }
+
+        editor.apply();
+    }
+
+    private void loadCheckboxValues() {
+        assert preferences != null;
+
+        for(int i = 0; i <weightLinearLayout.getChildCount(); i++) {
+            if (weightLinearLayout.getChildAt(i).getClass() != CheckBox.class)
+                continue;
+            CheckBox child = (CheckBox) weightLinearLayout.getChildAt(i);
+            child.setChecked(preferences.getBoolean(String.valueOf(child.getId()), false));
+        }
+
+        for(int i = 0; i <yogaLinearLayout.getChildCount(); i++) {
+            if (yogaLinearLayout.getChildAt(i).getClass() != CheckBox.class)
+                continue;
+            CheckBox child = (CheckBox) yogaLinearLayout.getChildAt(i);
+            child.setChecked(preferences.getBoolean(String.valueOf(child.getId()), false));
+        }
+
+        for(int i = 0; i <cardioLinearLayout.getChildCount(); i++) {
+            if (cardioLinearLayout.getChildAt(i).getClass() != CheckBox.class)
+                continue;
+            CheckBox child = (CheckBox) cardioLinearLayout.getChildAt(i);
+            child.setChecked(preferences.getBoolean(String.valueOf(child.getId()), false));
+        }
+    }
+
     private void loadBackground(String targetBackground) {
         assert weightInclude != null && yogaInclude != null && cardioInclude != null;
 
@@ -134,6 +201,7 @@ public class DetailActivity extends Activity {
         MainActivity.WeightCompletion = (int) (((float)weightChecked / (float)NUM_CHECKBOX) * 100f);
         MainActivity.YogaCompletion = (int) (((float)yogaChecked / (float)NUM_CHECKBOX) * 100f);
         MainActivity.CardioCompletion = (int) (((float)cardioChecked / (float)NUM_CHECKBOX) * 100f);
+        MainActivity.savePrefValues();
     }
     //endregion
 
