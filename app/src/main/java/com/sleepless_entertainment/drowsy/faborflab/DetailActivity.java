@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-import java.util.HashMap;
-
 public class DetailActivity extends Activity {
 
     private static final int NUM_CHECKBOX = 5;
