@@ -8,13 +8,13 @@
 
     <ImageButton
         android:id="@+id/upButton"
-        android:layout_width="40dp"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/up_arrow"
         android:onClick="onClickUp"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
         android:src="@drawable/upbutton2x"
         app:layout_constraintBottom_toTopOf="@+id/bottomFrame"
         app:layout_constraintEnd_toEndOf="parent"

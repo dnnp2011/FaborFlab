@@ -7,7 +7,7 @@
     tools:context=".DetailActivity">
 
     <include
-        android:id="@+id/background"
+        android:id="@+id/weightLiftingBG"
         android:name="fragment_ui_frame.class"
         layout="@layout/layout_weightlifting"
         android:layout_width="fill_parent"
@@ -16,7 +16,7 @@
         tools:layout="@layout/layout_weightlifting" />
 
     <include
-        android:id="@+id/background"
+        android:id="@+id/yogaBG"
         android:name="fragment_ui_frame.class"
         layout="@layout/layout_yoga"
         android:layout_width="fill_parent"
@@ -25,7 +25,7 @@
         tools:layout="@layout/layout_weightlifting" />
 
     <include
-        android:id="@+id/background"
+        android:id="@+id/cardioBG"
         android:name="fragment_ui_frame.class"
         layout="@layout/layout_cardio"
         android:layout_width="fill_parent"
