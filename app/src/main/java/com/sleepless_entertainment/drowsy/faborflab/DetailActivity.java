@@ -52,6 +52,7 @@ public class DetailActivity extends Activity {
 //        TODO: Have up arrow pop up an exercise selection UI, to avoid reliance on NEXT button
 //        TODO: Implement top menu button
 //        TODO: Add unique checklist items
+//        TODO: Ensure that activities return to view the same direction they left from
     }
 
     @Override
